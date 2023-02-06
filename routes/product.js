@@ -4,16 +4,15 @@ const router = express.Router();
 const Product = require('../models/product');
 const mycontrol = require('../controller/mycontroller');
 
+router.get('/products', mycontrol.home);
+router.get('/products/new', mycontrol.new);
 
-router.get('/', mycontrol.home);
-router.get('/new', mycontrol.new);
-
-router.post('/', mycontrol.mypost);
+router.post('/post', mycontrol.mypost);
 
 
-router.get('/:id', mycontrol.getshow);
-router.get('/:id/edit', mycontrol.editid);
-router.patch('/:id', mycontrol.mypatch);
+router.get('/products/:id', mycontrol.getshow);
+router.get('/products/:id/edit', mycontrol.editid);
+router.patch('/products/:id', mycontrol.mypatch);
 
 
 

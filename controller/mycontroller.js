@@ -5,7 +5,6 @@ module.exports.home=async (req, res) => {
     const products = await Product.find({});
     res.render('index', { products });
 };
-
 module.exports.new= (req,res)=>{
     res.render('new');
 }
@@ -19,7 +18,8 @@ module.exports.mypost= async (req,res)=>{
 }
 
 module.exports.getshow=async(req,res)=>{
-    const {id} = req.params;
+    // console.log(req.params.id);
+    const {id} = req.params.id;
     const product = await Product.findById(req.params.id);
     res.render('show' , {product});
 }

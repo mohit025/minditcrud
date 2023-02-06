@@ -13,7 +13,7 @@ const methodOverride = require('method-override')
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 
-    mongoose.connect('mongodb://127.0.0.1:27017/shopAppnew', )
+    mongoose.connect('mongodb://127.0.0.1:27017/shopAppnew', {useNewUrlParser: true,useUnifiedTopology: true})
     .then(()=>{
         console.log("DB connected");
     })
