@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit it</h2>
+
+    <form action="/products/<%=product._id%>?_method=PATCH" method="POST">
+
+
+
+        <input type="text" name="name" id="" placeholder="Name" value="<%=product.name%>">
+        <br><br>
+        <input type="text" name="price" id="" placeholder="Price" value="<%=product.price%>">
+        <br>
+        <br>
+        <br>                
+        <br>
+        <br>
+
+        <textarea name="desc" id="" cols="30" rows="10"><%=product.desc%></textarea>
+        <br>
+        <br>
+        <button>Update</button>
+    </form>
+
+</body>
+</html>
